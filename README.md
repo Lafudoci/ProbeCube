@@ -17,5 +17,4 @@ ProbeCube是個基於開放硬體的物聯網專案，動手製作WiFi連網的�
 
 ##範例
 * [Thingspeak channel 範例](https://thingspeak.com/channels/26769) - 即時上傳的空氣觀測資料!
-* 疊加在arduino uno上的probecube組件
-![](https://github.com/Lafudoci/ProbeCube/blob/master/pc_shield_demo.jpg)
+* 疊加在arduino uno上的probecube組件  ![](https://github.com/Lafudoci/ProbeCube/blob/master/pc_shield_demo.jpg)
