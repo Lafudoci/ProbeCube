@@ -1,4 +1,5 @@
-//https://github.com/Lafudoci/ProbeCube
+//ProbeCube_v0.95
+//Copyright (C) 2015 Lafudoci (https://github.com/Lafudoci)
 
 //thingspeak設定============================================================
   String thingSpeakAddress = "http://api.thingspeak.com/update?";
