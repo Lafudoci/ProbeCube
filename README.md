@@ -5,15 +5,16 @@ ProbeCube是個基於開放硬體的物聯網專案，動手製作WiFi連網的�
 
 ##如何開始
 1. 準備材料
-2. 焊接或使用麵包板連接各部元件
+2. 焊接或使用麵包板連接各部元件組成ProbeCube
 3. 註冊[Thingspeak](https://thingspeak.com/)帳號並設定上傳channel
-4. 將程式碼客製修改後編譯寫入Arudino Nano
-5. 到ProbeCube共同觀測地圖提交你的channel ID分享資料(開發中)
+4. 將程式碼客製修改後編譯寫入ProbeCube
+5. ProbeCube的資料將會上傳至Thingspeak
+6. 到ProbeCube共同觀測地圖提交你的Thindspeak Channel ID分享資料(正在開發中)
 
 ##連結
 
 * 詳細組裝及設定步驟圖文
-* 共同觀測地圖的原始碼
+* [共同觀測地圖](http://www.3203.info/Air/)及其[原始碼](https://github.com/immortalmice/ThingSpeak-Visual-Map)
 
 ##範例
 * [Thingspeak channel 範例](https://thingspeak.com/channels/26769) - 即時上傳的空氣觀測資料!
