@@ -3,14 +3,17 @@
 ##專案簡介
 ProbeCube是個基於開放硬體的物聯網專案，動手製作WiFi連網的機器來偵測空氣品質並組織共同的觀測地圖。
 
+附註: 觀測地圖的部分目前已改以g0v的專案方向開發，即將發佈，請參考連結。
+
+
 ##運作原理
-感測器-Arduino-(wifi)-Thingspeak-觀測地圖
+感測器-Arduino(wifi)-Thingspeak-觀測地圖
 
 ##感測項目
 * 溫度
 * 濕度
 * 空氣中總揮發物質(VoCs)
-* 懸浮微粒
+* 懸浮微粒PM2.5
 
 ##如何開始
 1. 準備材料
@@ -23,7 +26,7 @@ ProbeCube是個基於開放硬體的物聯網專案，動手製作WiFi連網的�
 ##連結
 
 * 詳細組裝及設定步驟圖文
-* [共同觀測地圖](http://www.3203.info/Air/)及其[原始碼](https://github.com/immortalmice/ThingSpeak-Visual-Map)
+* [g0v零時觀測網](http://www.3203.info/map.html)及其[原始碼](https://github.com/immortalmice/ThingSpeak-Visual-Map)
 
 ##範例
 * [Thingspeak channel 範例](https://thingspeak.com/channels/26769) - 即時上傳的空氣觀測資料!
