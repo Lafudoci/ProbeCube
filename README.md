@@ -25,7 +25,7 @@ ProbeCube是個基於開放硬體的物聯網專案，動手製作WiFi連網的�
 
 ##連結
 
-* 詳細組裝及設定步驟圖文
+* 詳細組裝及設定步驟圖文 (撰寫中)
 * [g0v零時觀測網](http://www.3203.info/map.html)及其[原始碼](https://github.com/immortalmice/ThingSpeak-Visual-Map)
 
 ##範例
