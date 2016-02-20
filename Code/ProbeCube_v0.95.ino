@@ -57,7 +57,7 @@ void setup(void)     //初始化函數
   //指定通訊視窗9600
   Serial.begin(9600);   
  
-  Serial.println("ProbePot is starting v0.95");
+  Serial.println("ProbeCube is starting v0.95");
   
   //LED們初始化
   pinMode(red_led,OUTPUT);
