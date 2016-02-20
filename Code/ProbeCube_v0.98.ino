@@ -62,7 +62,7 @@ void setup(void)
   //指定通訊視窗9600
   Serial.begin(9600);   
 
-  Serial.println("ProbePot is starting");
+  Serial.println("ProbeCube is starting");
   Serial.print("code version: ");
   Serial.println(VERSION);
 
