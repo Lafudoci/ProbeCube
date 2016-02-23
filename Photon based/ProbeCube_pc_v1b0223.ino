@@ -1,12 +1,3 @@
-// This #include statement was automatically added by the Particle IDE.
-#include "PietteTech_DHT/PietteTech_DHT.h"
-
-// This #include statement was automatically added by the Particle IDE.
-#include "ThingSpeak/ThingSpeak.h"
-
-// This #include statement was automatically added by the Particle IDE.
-#include "blynk/blynk.h"
-
 
 //thingspeak設定
 
