@@ -1,12 +1,24 @@
+// This #include statement was automatically added by the Particle IDE.
+#include "PietteTech_DHT/PietteTech_DHT.h"
+
+// This #include statement was automatically added by the Particle IDE.
+#include "ThingSpeak/ThingSpeak.h"
+
+// This #include statement was automatically added by the Particle IDE.
+#include "blynk/blynk.h"
+
 
 //thingspeak設定
 
-unsigned long myChannelNumber = 99999; //填入thingspeak channel ID ***必填
-const char * myWriteAPIKey = "FKQQX8C5IEADQxxx"; //填入thingspeak API key ***必填
+unsigned long myChannelNumber = XXXXX; //填入thingspeak channel ID ***必填
+const char * myWriteAPIKey = "Z9LVXARGKI6KJXXX"; //填入thingspeak API key ***必填
 
 //Blynk設定
 
-char auth[] = "871d182377fa4ef0995ccc76038xxxxx"; //填入blynk auth key ***必填
+char auth[] = "07dfd97a0c8c4927ba6a67126faXXXXX"; //填入blynk auth key ***必填
+
+//版本號
+#define VERSION "v099b0223"
 
 //計時上傳
 int ThingspeakUpdateTime = 0;
@@ -33,7 +45,7 @@ PietteTech_DHT DHT(DHTPIN, DHTTYPE, dht_wrapper);
 #define Compensator_hum 0
 //===========================
 //有機汙染
-#define gasSensor 0 //指定要量測的腳位為A1
+#define gasSensor 0 //指定要量測的腳位為A0
 char sensor_voc[5];
 //懸浮微粒
 long  pmcf10 = 0;
@@ -48,7 +60,7 @@ char buf[50];
 
 void setup(void)     //初始化函數
 {
-  Particle.publish("Start ver." , "ProbeCube online");
+  Particle.publish("Start ver." , VERSION);
 
   Serial.begin(115200);
 
