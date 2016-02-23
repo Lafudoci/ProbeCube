@@ -1,11 +1,11 @@
 //thingspeak設定變數
-String writeAPIKey =    "WY5NOJ8LCM27RXXX";  //填入thingspeak write API key ***必填
+String writeAPIKey =    "2MM69QFI2X4UDXXX";  //填入thingspeak write API key ***必填
 //CC3000無線網路設定變數
 #define WLAN_SSID       "3203BIGDATA"     //填入無線網路名稱  ***必填
 #define WLAN_PASS       "3203BIGDATA"     //填入無線網路密碼  ***必填
 //GP2Y1010校正公式變數
-#define slope_factor            "838"     //填入斜率參數  ***必填
-#define interception_factor     "387"      //填入截距參數  ***必填
+#define slope_factor            "1109"     //填入斜率參數  ***必填
+#define interception_factor     "586"      //填入截距參數  ***必填
 
 //版本號
 #define VERSION 0.98
