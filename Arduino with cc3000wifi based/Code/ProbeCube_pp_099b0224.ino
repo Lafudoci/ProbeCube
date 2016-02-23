@@ -8,7 +8,7 @@ String writeAPIKey =    "2MM69QFI2X4UDXXX";  //填入thingspeak write API key **
 #define interception_factor     "586"      //填入截距參數  ***必填
 
 //版本號
-#define VERSION "099b0223"
+#define VERSION "099b0224"
 //cc3000設定
 #define WLAN_SECURITY   WLAN_SEC_WPA2     //無線網路加密方式
 #include <Wire.h>
