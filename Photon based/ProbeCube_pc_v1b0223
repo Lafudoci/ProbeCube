@@ -10,12 +10,12 @@
 
 //thingspeak設定
 
-unsigned long myChannelNumber = 23139; //填入thingspeak channel ID ***必填
-const char * myWriteAPIKey = "FKQQX8C5IEADQY0H"; //填入thingspeak API key ***必填
+unsigned long myChannelNumber = 99999; //填入thingspeak channel ID ***必填
+const char * myWriteAPIKey = "FKQQX8C5IEADQxxx"; //填入thingspeak API key ***必填
 
 //Blynk設定
 
-char auth[] = "871d182377fa4ef0995ccc76038e3ecc"; //填入blynk auth key ***必填
+char auth[] = "871d182377fa4ef0995ccc76038xxxxx"; //填入blynk auth key ***必填
 
 //計時上傳
 int ThingspeakUpdateTime = 0;
