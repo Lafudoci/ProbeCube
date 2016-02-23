@@ -1,5 +1,5 @@
 //thingspeak設定變數
-String writeAPIKey =    "2MM69QFI2X4UDXX";  //填入thingspeak write API key ***必填
+String writeAPIKey =    "2MM69QFI2X4UDXXX";  //填入thingspeak write API key ***必填
 //CC3000無線網路設定變數
 #define WLAN_SSID       "3203BIGDATA"     //填入無線網路名稱  ***必填
 #define WLAN_PASS       "3203BIGDATA"     //填入無線網路密碼  ***必填
@@ -8,7 +8,7 @@ String writeAPIKey =    "2MM69QFI2X4UDXX";  //填入thingspeak write API key ***
 #define interception_factor     "586"      //填入截距參數  ***必填
 
 //版本號
-#define VERSION "099b0224"
+#define VERSION "099b0223"
 //cc3000設定
 #define WLAN_SECURITY   WLAN_SEC_WPA2     //無線網路加密方式
 #include <Wire.h>
@@ -156,8 +156,10 @@ void setup(void)
     delay(500);
   }
   wdt_disable();
+  Serial.print(F("("));
   cc3000.printIPdotsRev(ip);
-
+  Serial.println(F(")"));
+  
   //懸浮微粒感測器初始化
   pinMode(dustledPower, OUTPUT);
 
@@ -273,15 +275,16 @@ void loop(void)     //循環函數區域
     Serial.print(F("\r\n"));
     wdt_reset ();
     
-    Serial.println("Data has been sent successfully...");
-    Serial.print("Thingspeak response: ");
+    Serial.println(F("Data has been sent successfully..."));
+    Serial.print(F("Thingspeak response: "));
     while (client.connected()) {
       while (client.available()) {
         char resp = client.read();
         Serial.print(resp);
       }
     }
-    Serial.println("\nwaiting for next update...");
+    Serial.println(F("\nwaiting for next update..."));
+    Serial.println("");
     client.close();
     wdt_disable();
   }
