@@ -2,7 +2,7 @@
 String writeAPIKey =    "H9G82IFDUQFL3XXX";  //填入thingspeak write API key ***必填
 //CC3000無線網路設定變數
 #define WLAN_SSID       "3203BIGDATA"     //填入無線網路名稱  ***必填
-#define WLAN_PASS       "0955618968"     //填入無線網路密碼  ***必填
+#define WLAN_PASS       "3203BIGDATA"     //填入無線網路密碼  ***必填
 //GP2Y1010校正公式變數
 #define slope_factor            "604"     //填入斜率參數  ***必填
 #define interception_factor     "301"      //填入截距參數  ***必填
