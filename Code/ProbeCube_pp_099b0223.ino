@@ -1,5 +1,5 @@
 //thingspeak設定變數
-String writeAPIKey =    "H9G82IFDUQFL35PF";  //填入thingspeak write API key ***必填
+String writeAPIKey =    "H9G82IFDUQFL3XXX";  //填入thingspeak write API key ***必填
 //CC3000無線網路設定變數
 #define WLAN_SSID       "3203BIGDATA"     //填入無線網路名稱  ***必填
 #define WLAN_PASS       "0955618968"     //填入無線網路密碼  ***必填
