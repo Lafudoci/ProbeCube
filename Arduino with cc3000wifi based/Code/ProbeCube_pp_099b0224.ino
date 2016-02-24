@@ -128,8 +128,9 @@ void setup(void)
       }
       LED_wait();
       delay(100);
+      DHCPwait++;
     }
-    DHCPwait++;
+    
 
     while (!displayConnectionDetails()) {
       if ( IPwait > 30) {
