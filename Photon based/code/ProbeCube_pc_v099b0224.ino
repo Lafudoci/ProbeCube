@@ -6,16 +6,16 @@
 
 //thingspeak設定============================================================
 
-unsigned long myChannelNumber = 26769;
-const char * myWriteAPIKey = "Z9LVXARGKI6KJJ1H"; //填入thingspeak API key ***必填
+unsigned long myChannelNumber = 267xx;
+const char * myWriteAPIKey = "Z9LVXARGKI6Kxxx"; //填入thingspeak API key ***必填
 
 //Blynk設定===================================================================
 
-char auth[] = "07dfd97a0c8c4927ba6a67126fa7231c";
+char auth[] = "07dfd97a0c8c4927ba6a67126xxxxxx";
 
 
 //版本號
-#define VERSION "v1b0223"
+#define VERSION "v1b0224"
 
 //計時上傳
 unsigned long currentMillis = 0;
