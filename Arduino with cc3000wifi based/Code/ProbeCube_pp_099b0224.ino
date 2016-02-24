@@ -276,7 +276,7 @@ void loop(void)     //循環函數區域
     Serial.print(F("\r\n"));
     wdt_reset ();
     
-    Serial.println(F("Data has been sent successfully..."));
+    Serial.println(F("Data has been sent successfully!!!"));
     Serial.print(F("Thingspeak response: "));
     while (client.connected()) {
       while (client.available()) {
