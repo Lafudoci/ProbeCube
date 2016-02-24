@@ -379,9 +379,14 @@ float measure_soil() {
 }
 
 float measure_voc() {
+  float voc = 0;
+  for (int i = 1; i <= 5; i ++) {
   float tgsADVcalib_tm = analogRead(gasSensor) * (-0.0256 * dht.readTemperature() + 1.535); //將ADV做溫度補償
   float tgsADVcalib_tm_hm = tgsADVcalib_tm * (-0.0029 * dht.readHumidity() + 1.1938); //將ADV做濕度補償
-  float voc = (tgsADVcalib_tm_hm - 113.87) / 10.497; //將ADV換算成ppm濃度
+  voc += (tgsADVcalib_tm_hm - 113.87) / 10.497; //將ADV換算成ppm濃度
+  delay(1000);
+  }
+  voc /= 5;
   if (voc < 0) {
     voc = 0;   //將負數的讀值歸零
   }
@@ -400,7 +405,6 @@ float measure_dust() {
       delayMicroseconds(deltaTime);
       digitalWrite(dustledPower, HIGH); // turn the LED off
       delayMicroseconds(sleepTime);
-
     }
     voMeasured /= 200;
 
