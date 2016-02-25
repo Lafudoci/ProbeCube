@@ -1,11 +1,11 @@
 //thingspeak設定變數
-String writeAPIKey =    "2MM69QFI2X4UDXXX";  //填入thingspeak write API key ***必填
+String writeAPIKey =    "H9G82IFDUQFL3XXX";  //填入thingspeak write API key ***必填
 //CC3000無線網路設定變數
 #define WLAN_SSID       "3203BIGDATA"     //填入無線網路名稱  ***必填
 #define WLAN_PASS       "3203BIGDATA"     //填入無線網路密碼  ***必填
 //GP2Y1010校正公式變數
-#define slope_factor            "1109"     //填入斜率參數  ***必填
-#define interception_factor     "586"      //填入截距參數  ***必填
+#define slope_factor            "604"     //填入斜率參數  ***必填
+#define interception_factor     "312"      //填入截距參數  ***必填
 
 //版本號
 #define VERSION "099b0224"
@@ -130,7 +130,7 @@ void setup(void)
       delay(100);
       DHCPwait++;
     }
-    
+
 
     while (!displayConnectionDetails()) {
       if ( IPwait > 30) {
@@ -160,7 +160,7 @@ void setup(void)
   Serial.print(F("("));
   cc3000.printIPdotsRev(ip);
   Serial.println(F(")"));
-  
+
   //懸浮微粒感測器初始化
   pinMode(dustledPower, OUTPUT);
 
@@ -190,16 +190,20 @@ void loop(void)     //循環函數區域
 
     //讀取溫溼度
     float sensor_tem = measure_tem();
+    Serial.println(F("Tem OK!"));
     float sensor_hum = measure_hum();
+    Serial.println(F("Hum OK!"));
 
     //讀取土壤濕度
     int sensor_soil = measure_soil();
+    Serial.println(F("soil OK!"));
 
     //讀取有機氣體汙染
     float sensor_voc = measure_voc();
-
+    Serial.println(F("voc OK!"));
     //讀取灰塵感測
     float sensor_dust = measure_dust();
+    Serial.println(F("dust OK!"));
 
     //產生亂數
     int ran = random(100, 999);
@@ -275,7 +279,7 @@ void loop(void)     //循環函數區域
     Serial.print(ran);
     Serial.print(F("\r\n"));
     wdt_reset ();
-    
+
     Serial.println(F("Data has been sent successfully!!!"));
     Serial.print(F("Thingspeak response: "));
     while (client.connected()) {
@@ -380,11 +384,12 @@ float measure_soil() {
 
 float measure_voc() {
   float voc = 0;
+  Serial.print(F("VoC Sampling 5 times..."));
   for (int i = 1; i <= 5; i ++) {
-  float tgsADVcalib_tm = analogRead(gasSensor) * (-0.0256 * dht.readTemperature() + 1.535); //將ADV做溫度補償
-  float tgsADVcalib_tm_hm = tgsADVcalib_tm * (-0.0029 * dht.readHumidity() + 1.1938); //將ADV做濕度補償
-  voc += (tgsADVcalib_tm_hm - 113.87) / 10.497; //將ADV換算成ppm濃度
-  delay(1000);
+    float tgsADVcalib_tm = analogRead(gasSensor) * (-0.0256 * dht.readTemperature() + 1.535); //將ADV做溫度補償
+    float tgsADVcalib_tm_hm = tgsADVcalib_tm * (-0.0029 * dht.readHumidity() + 1.1938); //將ADV做濕度補償
+    voc += (tgsADVcalib_tm_hm - 113.87) / 10.497; //將ADV換算成ppm濃度
+    delay(1000);
   }
   voc /= 5;
   if (voc < 0) {
@@ -398,7 +403,8 @@ float measure_dust() {
   float dustDensity = 0;
   int k = 0;
   while ( dustDensity < 1 ) {
-    for (int i = 1; i <= 200; i ++) {
+    Serial.print(F("Dust Sampling 500 times..."));
+    for (int i = 1; i <= 500; i ++) {
       digitalWrite(dustledPower, LOW); // power on the LED
       delayMicroseconds(samplingTime);
       voMeasured += analogRead(measurePin); // read the dust value
@@ -406,7 +412,7 @@ float measure_dust() {
       digitalWrite(dustledPower, HIGH); // turn the LED off
       delayMicroseconds(sleepTime);
     }
-    voMeasured /= 200;
+    voMeasured /= 500;
 
     float slope = atoi(slope_factor);
     float interception = atoi(interception_factor);
