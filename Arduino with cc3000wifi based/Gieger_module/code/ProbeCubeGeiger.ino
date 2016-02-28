@@ -1,7 +1,13 @@
 //////////////////////////////////////////////////
-// Radiation-Watch.org
-// URL http://www.radiation-watch.org/
+// Modified by Lafudoci based on Radiation-Watch.org
+// Released under MIT License.
 //////////////////////////////////////////////////
+///　Digital I/O PIN Settings　///
+int signPin = 2; //Radiation Pulse (Yellow)
+int noisePin = 6; //Vibration Noise Pulse (White)
+//VCC 5V (Red)
+//GND (Blue)
+////////////////////////////////
 
 ///　Digital I/O PIN Settings　///
 int signPin = 2; //Radiation Pulse (Yellow)
