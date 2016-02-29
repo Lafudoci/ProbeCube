@@ -9,11 +9,14 @@ ProbeCube是個基於開放硬體的物聯網專案，動手製作WiFi連網的�
 ##運作原理
 感測器-Arduino(wifi)-Thingspeak-觀測地圖
 
+##支援的硬體
+*Arduino NANO, UNO + Adafruit CC3000 wifi module
+*Particle Photon
+
 ##感測項目
-* 溫度
-* 濕度
-* 空氣中總揮發物質(VoCs)
-* 懸浮微粒PM2.5
+* 溫度/濕度 - DHT22
+* 空氣中總揮發物質(VoCs) - FIGARO tgs2602
+* 懸浮微粒PM2.5 - PMS3003(G3) 
 
 ##如何開始
 1. 準備材料
