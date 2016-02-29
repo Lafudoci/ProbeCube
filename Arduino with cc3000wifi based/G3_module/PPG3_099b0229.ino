@@ -1,5 +1,5 @@
 //thingspeak設定變數
-String writeAPIKey =    "K8F66UNFID63Sxxx";  //填入thingspeak write API key ***必填
+String writeAPIKey =    "K8F66UNFID63SXXX";  //填入thingspeak write API key ***必填
 //CC3000無線網路設定變數
 #define WLAN_SSID       "3203BIGDATA"     //填入無線網路名稱  ***必填
 #define WLAN_PASS       "3203BIGDATA"     //填入無線網路密碼  ***必填
@@ -25,7 +25,7 @@ uint32_t IPwait;
 #define green_led     9
 //thingspeak上傳設定
 String thingSpeakAddress = "http://api.thingspeak.com/update?";
-#define Thingspeak_INTERVAL 60000
+#define Thingspeak_INTERVAL 300000
 unsigned long currentMillis = 0;
 unsigned long previousUpdateMillis = 0;
 boolean firstRun = true;
