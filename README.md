@@ -11,6 +11,7 @@ ProbeCube是個基於開放硬體的物聯網專案，動手製作WiFi連網的�
 
 ##支援的硬體
 *Arduino NANO, UNO + Adafruit CC3000 wifi module
+
 *Particle Photon
 
 ##感測項目
