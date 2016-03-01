@@ -1,5 +1,5 @@
 //thingspeak設定變數
-String writeAPIKey =    "K8F66UNFID63Sxxx";  //填入thingspeak write API key ***必填
+String writeAPIKey =    "H9G82IFDUQFLXXXX";  //填入thingspeak write API key ***必填
 //CC3000無線網路設定變數
 #define WLAN_SSID       "3203BIGDATA"     //填入無線網路名稱  ***必填
 #define WLAN_PASS       "3203BIGDATA"     //填入無線網路密碼  ***必填
@@ -22,7 +22,8 @@ uint32_t DHCPwait;
 uint32_t checkDHCP;
 uint32_t IPwait;
 //指定指示燈腳位
-#define green_led     9
+#define green_led   9
+#define yellow_led  8
 //thingspeak上傳設定
 String thingSpeakAddress = "http://api.thingspeak.com/update?";
 #define Thingspeak_INTERVAL 60000
@@ -37,6 +38,14 @@ boolean needUpdate;
 #include <DHT.h>
 #define DHTPIN 4 //指定要量測的腳位為D4
 #define DHTTYPE DHT22 //指定溫溼度感測器種類為DHT22
+float dht_tem = 0;
+float dht_hum = 0;
+float measure_tem = 0;
+float measure_hum = 0;
+#define MIN_TEMPERATURE -30
+#define MAX_TEMPERATURE 99
+#define MIN_HUMIDITY 0
+#define MAX_HUMIDITY 100
 DHT dht(DHTPIN, DHTTYPE);
 //溫濕度校正變數設定
 #define Compensator_tem -7
@@ -72,6 +81,7 @@ void setup(void)
 
   //LED們初始化
   pinMode(green_led, OUTPUT);
+  pinMode(yellow_led, OUTPUT);
   pinMode(G3SetPin, OUTPUT);
   digitalWrite(G3SetPin, LOW); //關閉G3
 
@@ -182,23 +192,14 @@ void loop(void)     //循環函數區域
   }
   if (needUpdate) { //若判斷為需要更新則開始測量&上傳
 
-
-    //    //==========PC_G3 ONLY============
-    //    if (RunOnce) {
-    //      Serial.println(F("Bye!"));
-    //      wdt_enable (WDTO_15MS);
-    //      while (1);
-    //    }
-    //    RunOnce = true;
-    //    //================================
-
     Serial.println(F("Starting to monitor the air....."));
     previousUpdateMillis = currentMillis;
 
     //讀取溫溼度
-    float sensor_tem = measure_tem();
+    measure_dht();
+    float sensor_tem = measure_tem;
     Serial.println(F("Tem OK!"));
-    float sensor_hum = measure_hum();
+    float sensor_hum = measure_hum;
     Serial.println(F("Hum OK!"));
 
     //讀取土壤濕度
@@ -371,13 +372,29 @@ bool displayConnectionDetails(void)
   }
 }
 
-float measure_tem() {
-  return (dht.readTemperature() + Compensator_tem);
+void measure_dht() {
+  int dhttry;
+  do {
+    dhttry = 0;
+    dht_tem = dht.readTemperature();
+    dht_hum = dht.readHumidity();
+
+    if (dhttry > 0) {
+      Serial.print("DHT error");
+      delay (1000);
+    }
+    dhttry++;
+  } while (isnan(dht_tem) != 0
+           || isnan(dht_hum) != 0
+           || dht_tem > MAX_TEMPERATURE
+           || dht_tem < MIN_TEMPERATURE
+           || dht_hum > MAX_HUMIDITY
+           || dht_hum < MIN_HUMIDITY);
+
+  measure_tem = Compensator_tem + dht_tem;
+  measure_hum = Compensator_hum + dht_hum;
 }
 
-float measure_hum() {
-  return (dht.readHumidity() + Compensator_hum);
-}
 
 float measure_soil() {
   return analogRead(soilSensor);
@@ -468,32 +485,40 @@ void measure_dust() {
 void LED_start()
 {
   digitalWrite(green_led, HIGH);
+  digitalWrite(yellow_led, HIGH);
   delay(1000);
   digitalWrite(green_led, LOW);
+  digitalWrite(yellow_led, LOW);
   delay(500);
   digitalWrite(green_led, HIGH);
+  digitalWrite(yellow_led, HIGH);
   delay(1000);
   digitalWrite(green_led, LOW);
+  digitalWrite(yellow_led, LOW);
 }
 
 void LED_check()
 {
   digitalWrite(green_led, LOW);
+  digitalWrite(yellow_led, HIGH);
 }
 
 void LED_wait()
 {
   digitalWrite(green_led, LOW);
+  digitalWrite(yellow_led, HIGH);
 }
 
 void LED_error()
 {
   digitalWrite(green_led, LOW);
+  digitalWrite(yellow_led, HIGH);
 }
 
 void LED_ok()
 {
   digitalWrite(green_led, HIGH);
+  digitalWrite(yellow_led, LOW);
 }
 
 void LED_send()
