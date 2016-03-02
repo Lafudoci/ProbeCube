@@ -40,7 +40,7 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 
 * [Thingspeak channel 範例](https://thingspeak.com/channels/26769) - 即時上傳的空氣觀測資料!
 
-<img src="https://github.com/Lafudoci/ProbeCube/blob/master/pics/ts_demo.JPG" width="500">
+<img src="/pc_pics/ts_demo.JPG" width="500">
 
 
 * 由arduino uno為主板搭配組裝後的ProbeCube  
