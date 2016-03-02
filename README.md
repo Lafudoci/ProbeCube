@@ -33,10 +33,14 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 * [g0v零時觀測網](http://www.3203.info/map.html)及其[原始碼](https://github.com/immortalmice/ThingSpeak-Visual-Map)
 
 ##範例
+*麵包版接線示意
+![](ProbeCube/Particle Photon based/ProbeCube_v099_20160225_bb.png)
+
 * [Thingspeak channel 範例](https://thingspeak.com/channels/26769) - 即時上傳的空氣觀測資料!
+![](ProbeCube/pics/ts_demo.JPG)
+
 * 由arduino uno為主板搭配組裝後的ProbeCube  
-![](https://github.com/Lafudoci/ProbeCube/blob/master/pc_uno_shield_demo.jpg)
-* 由Particle Photon為主板組裝後的ProbeCube  
-![](https://github.com/Lafudoci/ProbeCube/blob/master/Particle%20Photon%20based/2016-02-25_PC.jpg)
+![](ProbeCube/Arduino with cc3000wifi based/pc_uno_shield_demo.jpg)
+
 * 由Particle Photon為主板組裝後的ProbeCube裝上3D print外殼搭配Blynk app的呈現
-![](https://github.com/Lafudoci/ProbeCube/blob/master/P_20160302_150744.jpg)
+![](ProbeCube/Particle Photon based/pc_photon_blynk_demo.jpg)
