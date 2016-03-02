@@ -39,4 +39,4 @@ ProbeCube是個基於開放硬體的物聯網專案，動手製作WiFi連網的�
 * 由Particle Photon為主板組裝後的ProbeCube  
 ![](https://github.com/Lafudoci/ProbeCube/blob/master/Particle%20Photon%20based/2016-02-25_PC.jpg)
 * 由Particle Photon為主板組裝後的ProbeCube裝上3D print外殼搭配Blynk app的呈現
-![](https://github.com/Lafudoci/ProbeCube/blob/P_20160302_150744.jpg)
+![](https://github.com/Lafudoci/ProbeCube/blob/master/P_20160302_150744.jpg)
