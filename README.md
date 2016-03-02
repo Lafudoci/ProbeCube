@@ -17,7 +17,7 @@ ProbeCube是個基於開放硬體的物聯網專案，動手製作WiFi連網的�
 ##感測項目
 * 溫度/濕度 - DHT22
 * 空氣中總揮發物質(VoCs) - FIGARO tgs2602
-* 懸浮微粒PM2.5 - PMS3003(G3) 
+* 懸浮微粒PM2.5 - PMS3003(G3) 或 GP2Y1010AU0F
 
 ##如何開始
 1. 準備材料
@@ -34,7 +34,7 @@ ProbeCube是個基於開放硬體的物聯網專案，動手製作WiFi連網的�
 
 ##範例
 * [Thingspeak channel 範例](https://thingspeak.com/channels/26769) - 即時上傳的空氣觀測資料!
-* 由arduino uno為主板組裝後的ProbeCube  
+* 由arduino uno為主板搭配組裝後的ProbeCube  
 ![](https://github.com/Lafudoci/ProbeCube/blob/master/pc_uno_shield_demo.jpg)
 * 由Particle Photon為主板組裝後的ProbeCube  
 ![](https://github.com/Lafudoci/ProbeCube/blob/master/Particle%20Photon%20based/2016-02-25_PC.jpg)
