@@ -420,7 +420,7 @@ void measure_dust() {
 
   digitalWrite(G3SetPin, HIGH); //開啟G3
   Serial.println(F("Starting G3..need 13sec.."));
-  delay(13000);
+  delay(20000);
   int count_dust = 0;
   Serial.println(F("PM25 Sampling"));
   unsigned char c_dust = 0;
