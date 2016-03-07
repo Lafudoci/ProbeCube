@@ -3,7 +3,7 @@
 ##專案簡介
 ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作WiFi連網的機器來偵測空氣品質並組織共同的觀測地圖。
 
-附註: 觀測地圖的部分目前已改以g0v的專案方向開發，即將發佈，請參考連結。
+附註: 觀測地圖的部分目前已改以g0v的專案方向開發，請參考連結。
 
 
 ##運作原理
@@ -30,7 +30,7 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 ##連結
 
 * 詳細組裝及設定步驟圖文 (撰寫中)
-* [g0v零時觀測網](http://g0vairmap.3203.info/)及其[原始碼](https://github.com/immortalmice/Real-time-Air-Quality-Map)
+* [g0v零時空汙觀測網](http://g0vairmap.3203.info/)及其[原始碼](https://github.com/immortalmice/Real-time-Air-Quality-Map)
 
 ##範例
 * 麵包版接線示意
