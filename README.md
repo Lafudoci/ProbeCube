@@ -51,3 +51,7 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 * 由Particle Photon為主板組裝後的ProbeCube裝上3D print外殼搭配Blynk app的呈現
 
 <img src="https://github.com/Lafudoci/ProbeCube/blob/master/Particle Photon based/pc_photon_blynk_demo.jpg" width="500">
+
+* 由Particle Photon為主板組裝後的ProbeCube裝上3D print外殼現
+
+<img src="https://github.com/Lafudoci/ProbeCube/blob/master/pc_pics/2016-03-09 15.53.55.jpg" width="500">
