@@ -7,7 +7,7 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 
 
 ##運作原理
-感測器-Arduino(wifi)-Thingspeak-觀測地圖
+空氣汙染 -> 感測器 -> Arduino(wifi) -> Thingspeak -> 觀測地圖
 
 ##支援的硬體
 * Arduino NANO, UNO + Adafruit CC3000 wifi module
