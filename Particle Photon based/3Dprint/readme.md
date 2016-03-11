@@ -8,3 +8,5 @@ Print setting:
 
 
 <img src="https://github.com/Lafudoci/ProbeCube/blob/master/pc_pics/printing_case.jpg" width="500">
+
+<img src="https://github.com/Lafudoci/ProbeCube/blob/master/pc_pics/IMG_6577.jpg" width="500">
