@@ -47,10 +47,6 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 <img src="https://github.com/Lafudoci/ProbeCube/blob/master/Particle Photon based/ProbeCube_v099_20160225_bb.png" width="500">
 
 
-* [Thingspeak channel 範例](https://thingspeak.com/channels/26769) - 即時上傳的空氣觀測資料!
-
-<img src="/pc_pics/ts_demo.JPG" width="500">
-
 * 可洗PCB幫助縮小裝置體積
 
 <img src="/pc_pics/20160310.JPG" width="500">
@@ -71,3 +67,12 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 * 由Particle Photon為主板組裝後的ProbeCube裝上3D print外殼
 
 <img src="/pc_pics/IMG_6577.jpg" width="500">
+
+
+* [Thingspeak channel 範例](https://thingspeak.com/channels/26769) - 即時上傳的空氣觀測資料!
+
+<img src="/pc_pics/ts_demo.JPG" width="500">
+
+* g0v零時空汙觀測網的即時呈現
+
+<img src="/pc_pics/g0vairmap.JPG" width="500">
