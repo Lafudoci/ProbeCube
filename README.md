@@ -36,11 +36,6 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 5. ProbeCube的資料將會上傳至Thingspeak
 6. 到ProbeCube共同觀測地圖提交你的Thindspeak Channel ID分享資料(已併入g0v專案，請參考連結)
 
-##連結
-
-* 詳細組裝及設定步驟圖文 (撰寫中)
-* [g0v零時空汙觀測網](http://g0vairmap.3203.info/)及其[原始碼](https://github.com/immortalmice/Real-time-Air-Quality-Map)
-
 ##範例
 * 麵包版接線示意
 
@@ -76,3 +71,8 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 * g0v零時空汙觀測網的即時呈現
 
 <img src="/pc_pics/g0vairmap.JPG" width="500">
+
+##連結
+
+* 詳細組裝及設定步驟圖文 (撰寫中)
+* [g0v零時空汙觀測網](http://g0vairmap.3203.info/)及其[原始碼](https://github.com/immortalmice/Real-time-Air-Quality-Map)
