@@ -23,7 +23,7 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 * 懸浮微粒PM2.5 - PMS3003(G3) 或 GP2Y1010AU0F
 * 輻射劑量 - pockect gieger
 
-##附加規格
+##PCB設計附加規格
 * 全腳位預留輸出排母
 * I2C預留接座x2
 * groove 預留接座x1
