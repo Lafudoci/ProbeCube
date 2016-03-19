@@ -31,8 +31,8 @@ ProbeCube是個基於開放硬體的物聯網專案，鼓勵大眾動手製作Wi
 ##如何開始
 1. 準備材料 (材料表)
 2. 在PCB上焊接或使用麵包板連接各部元件組成ProbeCube
-3. 註冊[Thingspeak](https://thingspeak.com/)帳號並設定上傳channel
-4. 將程式碼客製修改後編譯寫入ProbeCube
+3. 註冊[Thingspeak](https://thingspeak.com/)帳號並設定上傳之頻道(channel)
+4. 將程式碼依需要修改後編譯寫入ProbeCube
 5. ProbeCube的資料將會上傳至Thingspeak
 6. 到ProbeCube共同觀測地圖提交你的Thindspeak Channel ID分享資料(已併入g0v專案，請參考連結)
 
