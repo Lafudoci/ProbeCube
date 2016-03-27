@@ -202,7 +202,7 @@ void measure_dust() {
     c = Serial1.read();
     if ((count == 0 && c != 0x42) || (count == 1 && c != 0x4d)) {
       Serial.println("check failed");
-      Particle.publish("Error", "G3 check failed, will retry...");
+//      Particle.publish("Error", "G3 check failed, will retry...");
       break;
     }
     if (count > 15) {
