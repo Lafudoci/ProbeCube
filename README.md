@@ -89,4 +89,4 @@ ProbeCube是個基於開源硬體的物聯網專案，鼓勵大眾動手製作Wi
 ##連結
 
 * 詳細組裝及設定步驟圖文 (撰寫中)
-* [g0v零時空汙觀測網](http://g0vairmap.3203.info/)及其[原始碼](https://github.com/immortalmice/Real-time-Air-Quality-Map)
+* [g0v零時空汙觀測網](http://airmap.g0v.asper.tw/)
