@@ -9,8 +9,8 @@
 
 //Particle product 設定
 
-PRODUCT_ID(xxxx);
-PRODUCT_VERSION(xx);
+//PRODUCT_ID(xxxx);
+//PRODUCT_VERSION(xx);
 
 
 //thingspeak設定
