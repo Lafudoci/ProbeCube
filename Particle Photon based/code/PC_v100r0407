@@ -171,8 +171,10 @@ void measure_dht() {
     float lastdht_hum = 0;
 
     do{
+		
 		lastdht_tem = dht_tem; // record last dht measure
 		lastdht_hum = dht_hum;
+		delay (1000);
 		
 		dhttry = 0;
         dht_tem = dht.getTempCelcius();
@@ -190,8 +192,8 @@ void measure_dht() {
         || dht_tem < MIN_TEMPERATURE
         || dht_hum > MAX_HUMIDITY
         || dht_hum < MIN_HUMIDITY
-        || abs(dht_tem - lastdht_tem) > 5  //remeasure dht if had spike
-        || abs(dht_hum - lastdht_hum) > 5);
+        || abs(dht_tem - lastdht_tem) > 2  //remeasure dht if had spike
+        || abs(dht_hum - lastdht_hum) > 2);
     
     measure_tem = ( dht_tem -3.3221 ) / 0.988;
     measure_hum = ( dht_hum -0.8229 ) / 0.7886;
