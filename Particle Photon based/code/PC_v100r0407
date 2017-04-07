@@ -23,7 +23,7 @@ const char * myWriteAPIKey = "M8WL4GVCLxxxxxx"; //填入thingspeak API key ***�
 char auth[] = "084c03b81c76438797157f8ada77xxxx"; //填入blynk auth key ***必填
 
 //code版本號
-#define VERSION "v100r0401"
+#define VERSION "v100r0407"
 
 //計時上傳
 int LastTimeCheck = 0;
@@ -80,6 +80,8 @@ void setup(void)
   
   sprintf(StartMsg, "Start ver. %s , wifi signal: %d %%", VERSION, wifi_signal());
   Particle.publish("Starting", StartMsg);
+  
+  Particle.variable("Ver.", VERSION);
 
   Serial.begin(115200);
   
@@ -165,8 +167,13 @@ void loop(void)  //循環函數區域
 void measure_dht() {
     
     int dhttry;
+    float lastdht_tem = 0;
+    float lastdht_hum = 0;
 
     do{
+		lastdht_tem = dht_tem; // record last dht measure
+		lastdht_hum = dht_hum;
+		
 		dhttry = 0;
         dht_tem = dht.getTempCelcius();
         dht_hum = dht.getHumidity();
@@ -182,7 +189,9 @@ void measure_dht() {
         || dht_tem > MAX_TEMPERATURE
         || dht_tem < MIN_TEMPERATURE
         || dht_hum > MAX_HUMIDITY
-        || dht_hum < MIN_HUMIDITY);
+        || dht_hum < MIN_HUMIDITY
+        || abs(dht_tem - lastdht_tem) > 5  //remeasure dht if had spike
+        || abs(dht_hum - lastdht_hum) > 5);
     
     measure_tem = ( dht_tem -3.3221 ) / 0.988;
     measure_hum = ( dht_hum -0.8229 ) / 0.7886;
