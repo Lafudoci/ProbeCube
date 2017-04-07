@@ -1,8 +1,8 @@
 Please include following libs at head of these codes in particle cloud IDE .<br>
 
-"PietteTech_DHT/PietteTech_DHT.h"
+#include <ProbeCube_blynk.h>
 
-"ThingSpeak/ThingSpeak.h"
+#include <ProbeCube_ThingSpeak.h>
 
-"blynk/blynk.h"
+#include <ProbeCube_DHT.h>
 
