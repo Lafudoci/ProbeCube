@@ -175,14 +175,33 @@ void measure_dht() {
 		lastdht_tem = dht_tem; // record last dht measure
 		lastdht_hum = dht_hum;
 		
-		dhttry = 0;
         dht_tem = dht.getTempCelcius();
         dht_hum = dht.getHumidity();
         
         if (dhttry > 0){
         Particle.publish("Error", "DHT error, will retry...");
         delay (10000);
+        
+        dht_tem = dht.getTempCelcius();
+        dht_hum = dht.getHumidity();
         }
+        
+        while (abs(dht_tem - lastdht_tem) > 2  //remeasure dht if had spike
+            || abs(dht_hum - lastdht_hum) > 2){
+                
+            if( lastdht_hum == 0 ) break; // hum=0 means first boot, ignore spike
+                
+            Particle.publish("Error", "DHT spike, will retry...");
+            
+            lastdht_tem = dht_tem; // record last dht measure
+		    lastdht_hum = dht_hum;
+            
+            delay (30000);
+        
+            dht_tem = dht.getTempCelcius();
+            dht_hum = dht.getHumidity();
+                
+            }
         
         dhttry++;
         
@@ -191,9 +210,7 @@ void measure_dht() {
         || dht_tem > MAX_TEMPERATURE
         || dht_tem < MIN_TEMPERATURE
         || dht_hum > MAX_HUMIDITY
-        || dht_hum < MIN_HUMIDITY
-        || abs(dht_tem - lastdht_tem) > 2  //remeasure dht if had spike
-        || abs(dht_hum - lastdht_hum) > 2);
+        || dht_hum < MIN_HUMIDITY);
     
     
     measure_tem = ( dht_tem -3.3221 ) / 0.988;
