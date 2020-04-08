@@ -76,9 +76,9 @@ ProbeCube是個基於開源硬體的物聯網專案，鼓勵大眾動手製作Wi
 
 * g0v零時空汙觀測網的即時呈現
 
-<img src="/pc_pics/g0vairmap.JPG" width="500">
+<img src="/pc_pics/20200408T08.jpg" width="500">
 
 ## 連結
 
 * [詳細組裝及設定步驟圖文](https://probecube.hackpad.com/-ProbeCube-fUI4k1BnZQ2)
-* [g0v零時空汙觀測網](https://airmap.g0v.tw/)
+* [g0v零時空汙觀測網專案](https://beta.hackfoldr.org/g0vairmap)
